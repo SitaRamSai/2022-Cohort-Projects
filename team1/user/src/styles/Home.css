@@ -1,0 +1,28 @@
+.home {
+    background-color: aqua;
+}
+
+.homeHeader {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 1px solid gray ;
+}
+
+.homeTitle {
+    display: flex;
+    margin-left: 5rem;
+}
+
+.homeNavBar ul {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black; 
+    height: 2rem;
+    width: 20rem;
+    margin-right: 5rem;
+    padding: 1rem;
+}
+
