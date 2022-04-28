@@ -1,5 +1,5 @@
 .home {
-    background-color: aqua;
+    background-color: pink;
 }
 
 .homeHeader {
@@ -26,3 +26,23 @@
     padding: 1rem;
 }
 
+.subHeader{
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15rem;
+}
+
+.subHeader div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+
+}
+
+.subHeader img{
+    margin-right: 5rem;
+    height: 12rem;
+    width: auto;
+}
