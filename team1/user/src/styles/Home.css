@@ -1,48 +1,48 @@
-.home {
-    background-color: pink;
-}
+/* .home {
+    background-color: #544272;
+} */
 
-.homeHeader {
+/* .homeHeader {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 5rem;
     border-bottom: 1px solid gray ;
-}
+} */
 
-.homeTitle {
+/* .homeTitle {
     display: flex;
-    margin-left: 5rem;
-}
+    margin-left: 10rem;
+} */
 
-.homeNavBar ul {
+/* .homeNavBar {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black; 
-    height: 2rem;
+    /* border: 1px solid black;  */
+    /* height: 2rem;
     width: 20rem;
-    margin-right: 5rem;
-    padding: 1rem;
-}
+    margin-right: 10rem;
+    padding: 1rem; */
+/* }  */
 
 .subHeader{
-    background-color: yellow;
+    background-color: wheat;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 15rem;
-}
+} 
 
 .subHeader div{
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
+    margin-left: 10rem;
 
 }
 
 .subHeader img{
-    margin-right: 5rem;
+    margin-right: 10rem;
     height: 12rem;
     width: auto;
 }
