@@ -15,7 +15,6 @@ const Home = () => {
     return (
         <div className='home'>
             <header className='homeHeader'>
-                
                 <Nav>
                     <NavLink to='/'>
                         <h1>funBlog</h1>
@@ -25,15 +24,16 @@ const Home = () => {
                     <NavLink to='/about' activeStyle>
                         About
                     </NavLink>
-                    <NavLink to='/signup' activeStyle>
-                        Signup
+                    <NavLink to='/login' activeStyle>
+                        Login
                     </NavLink>
+                    <NavBtnLink to='/signUp'>Get Started</NavBtnLink>
                     </NavMenu>
-                    <NavBtn>
+                    {/* <NavBtn>
                     <NavBtnLink to='/login'>Login</NavBtnLink>
-                    </NavBtn>
+                    </NavBtn> */}
                 </Nav>
-
+                
                 {/* <nav className='homeNavBar'>
                     <Link to={'/about'}> <a>About</a></Link>
                     <div>|</div>
@@ -42,7 +42,6 @@ const Home = () => {
                     <Link to={'/signup'}><button>Get Started</button></Link>
                 </nav> */}
             </header>
-            <br/>  
             <main className='homeMain'>
                 <div className='subHeader'>
                     <div>
@@ -50,7 +49,9 @@ const Home = () => {
                         <br/>
                         <h2>never backward..."</h2>
                     </div>
-                    <img src={img} alt='Mr.Bean' />
+                    <div className='imgDiv'>
+                        <img src={img} alt='Mr.Bean' />
+                    </div>
                 </div>
             </main>  
         </div>

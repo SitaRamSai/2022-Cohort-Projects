@@ -27,7 +27,7 @@
 /* }  */
 
 .subHeader{
-    background-color: wheat;
+    background-color: silver;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +35,7 @@
 } 
 
 .subHeader div{
+    color: #fff;
     display: flex;
     flex-direction: column;
     margin-left: 10rem;
@@ -45,4 +46,22 @@
     margin-right: 10rem;
     height: 12rem;
     width: auto;
+}
+
+.imgDiv{
+    left: 520px;
+    width: 585px;
+    position: absolute;
+    display: block;
+    align-items: center;
+}
+
+.homeH1 {
+    display: flex;
+    justify-content: center;
+}
+
+.homeH2 {
+    display: flex;
+    justify-content: center;
 }
