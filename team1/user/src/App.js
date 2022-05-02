@@ -5,7 +5,7 @@ import About from './components/About';
 import Home from './components/Home';
 import LoggedInHome from './components/LoggedInHome';
 import Login from './components/Login';
-import Signup from './components/Signup';
+import SignUp from './components/SignUp';
 
 
 class App extends React.Component{
@@ -18,7 +18,7 @@ class App extends React.Component{
         <Route path='/home' element={<LoggedInHome/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<Signup/>} />
+        <Route path='/signup' element={<SignUp/>} />
       </Routes>
     </div>
   )}
