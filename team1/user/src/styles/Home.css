@@ -1,44 +1,16 @@
-/* .home {
-    background-color: #544272;
-} */
-
-/* .homeHeader {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
-    border-bottom: 1px solid gray ;
-} */
-
-/* .homeTitle {
-    display: flex;
-    margin-left: 10rem;
-} */
-
-/* .homeNavBar {
-    display: flex;
-    justify-content: space-between;
-    /* border: 1px solid black;  */
-    /* height: 2rem;
-    width: 20rem;
-    margin-right: 10rem;
-    padding: 1rem; */
-/* }  */
 
 .subHeader{
     background-color: wheat;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15rem;
+    height: 25rem;
 } 
 
 .subHeader div{
     display: flex;
     flex-direction: column;
     margin-left: 10rem;
-
 }
 
 .subHeader img{
