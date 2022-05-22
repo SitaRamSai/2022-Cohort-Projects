@@ -1,11 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
-import './App.css';
-import About from './components/About';
-import Home from './components/Home';
+import './components/About/About';
+import About from './components/About/About';
+import Home from './components/LandingPage/Home';
 import LoggedInHome from './components/LoggedInHome';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import Nav from './components/LandingPage/Nav';
 
 
 class App extends React.Component{
@@ -13,6 +14,7 @@ class App extends React.Component{
  render() {
   return(
     <div>
+      <Nav/>
       <Routes>
         <Route exact path='/' element={<Home/>} />
         <Route path='/home' element={<LoggedInHome/>} />

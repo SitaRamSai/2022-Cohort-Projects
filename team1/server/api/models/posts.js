@@ -2,18 +2,20 @@ const mongoose = require('mongoose');
 
 const postSchema = mongoose.Schema({
     postId: Number,
-    userId: String,
-    title: String,
-    body: String,
-    likeCount: {
-        type: Number,
-        default: 0
+    user: {
+        userId: {type: Number, required: true},
+        userName: {type: String, required: true},
+        userImg: {type: String, required: true}
     },
-    createdAt: {
+    title: {type: String, required: true},
+    subTitle: {type: String, required: true},
+    body: {type: String, required: true},
+    postImg: {type: String, required: true},
+    dateCreated: {
         type: Date,
         default: new Date()
     },
-    comments: []
+    readLength: {type: Number, required: true}  
 })
 
 const Posts = mongoose.model('Posts', postSchema);

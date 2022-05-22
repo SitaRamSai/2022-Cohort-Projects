@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import PostTile from './PostTile';
 import { Posts} from './PostTileStyled';
 
 function TrendPost(props) {
 
+    const items = props.posts
+    const shuffledItems = items.sort(() => Math.random() - 0.5)
 
     let count = 1;
-    const listItems = props.posts.slice(0,6).map((post) =>
+    const listItems = shuffledItems.slice(0,6).map((post) =>
 
-        <PostTile 
+        <PostTile key = {post.id}
         count = { count++ }
         userImg = { post.user.userImg }
         userName = {post.user.userName}

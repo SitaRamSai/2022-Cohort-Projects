@@ -6,7 +6,7 @@ import { Posts } from './PostCardStyled'
 const PostList = (props) => {
 
     const postList = props.posts.map( (post) => 
-        <PostCard
+        <PostCard key = {post.id}
         userImg = { post.user.userImg }
         userName = { post.user.userName }
         title = { post.title }

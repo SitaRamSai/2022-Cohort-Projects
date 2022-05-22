@@ -8,6 +8,15 @@ export const Posts = styled.ul`
     height: 60%;
     width: 80%;
     border:1px solid yellow;
+
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
 `;
 
 export const Num = styled.div`

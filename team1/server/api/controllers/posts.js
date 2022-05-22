@@ -4,7 +4,7 @@ const getPosts = async (req, res, next) => {
     try {
         const posts = await Posts.find();
         
-        res.status(200).json({ message: posts });
+        res.status(200).json(posts);
     } catch (err) {
         next(err)
     }

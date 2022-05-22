@@ -1,30 +1,27 @@
 import React from 'react';
-import '../styles/Home.css';
-import img from '../images/img.png';
+import '../../styles/Home.css';
+import img from '../../images/img.png';
 import {
-    Nav,
-    NavLink,
-    Bars,
-    NavMenu,
-    NavBtn, 
     SubBtn, 
     SubBtnLink, 
-    NavBtnLink,
     HomeMain, 
     SubHeader, 
     SubHeaderTitle, 
     SubHeaderImage, 
     SubHeaderOutline,
     Trending, 
+    TrendingImg,
     TrendingTitle,
     AllPosts, 
     PostListWrap, 
     Tags, 
-    TagList, 
+    TagListWrap, 
     TagTitle
   } from './HomeStyled';
 import TrendPost from './TrendPost';
 import PostList from './PostList';
+import TagList from './TagList';
+import Nav from './Nav';
 
 const Home = () => {
 
@@ -48,25 +45,6 @@ const Home = () => {
     
     return (
         <div className='home'>
-            <header className='homeHeader'>
-                <Nav>
-                    <NavLink to='/'>
-                        <h1>funBlog</h1>
-                    </NavLink>
-                    <Bars />
-                    <NavMenu>
-                    <NavLink to='/about' activeStyle>
-                        About
-                    </NavLink>
-                    <NavLink to='/signup' activeStyle>
-                        Signup
-                    </NavLink>
-                    </NavMenu>
-                    <NavBtn>
-                    <NavBtnLink to='/login'>Login</NavBtnLink>
-                    </NavBtn>
-                </Nav>
-            </header>
             
             <HomeMain>
                 <SubHeader>
@@ -84,7 +62,7 @@ const Home = () => {
                 </SubHeader>
                 <Trending>
                     <TrendingTitle>
-                        <path>img</path>
+                        <TrendingImg></TrendingImg>
                         <h3>Trending here</h3>
                     </TrendingTitle>
                     <TrendPost posts = { posts } />
@@ -96,10 +74,10 @@ const Home = () => {
                     </PostListWrap>
                     
                     <Tags>
-                        <TagTitle>Discover more of what matters to you</TagTitle>
-                        <TagList>
-                            {  }
-                        </TagList>
+                        <TagTitle>DISCOVER MORE OF WHAT MATTERS TO YOU</TagTitle>
+                        <TagListWrap>
+                            <TagList tags = { tags} />
+                        </TagListWrap>
 
                     </Tags>
                 </AllPosts>
