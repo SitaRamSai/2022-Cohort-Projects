@@ -6,7 +6,6 @@ const { getAllUsers, createUsers, createUser, getUser, updateUser, deleteUser } 
 router.get('/users', getAllUsers);
 router.post('/users', createUsers);
 router.get('/user/:id', getUser);
-router.post('/', createUser);
 router.put('/user/:id', updateUser);
 router.delete('/user/:id', deleteUser);
 

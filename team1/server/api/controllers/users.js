@@ -1,13 +1,18 @@
 const Users = require('../models/users');
 
-const getAllUsers = async (req, res, next) => {
-    const users = await Users.find();
-    try {
-        res.status(200).json(users);
-    } catch (err) {
-        res.status(404).json({message: "Get All Users Failed"});
-        // next(err);
-    }
+const getAllUsers = (req, res, next) => {
+    Users.find({})
+        .then((data) => {
+            console.log(data);``
+        })
+        .catch(next)
+   
+    // try {
+    //     res.send(users);
+    // } catch (err) {
+    //     res.status(500).json({message: "Get All Users Failed"});
+    //     // next(err);
+    // }
 }
 
 const createUsers = async (req, res, next) => {
@@ -16,11 +21,12 @@ const createUsers = async (req, res, next) => {
 
     try {
         await newUser.save();
+        console.log('User saved by the bell');
         res.status(201).json(newUser);
         
     } catch (err) {
         res.status(404).json({message: "Create Users Failed"});
-        // next(err);
+        next(err);
     }
 }
 
@@ -43,8 +49,8 @@ const createUser = async (req, res, next) => {
         res.status(201).json(newUser);
         
     } catch (err) {
-        res.status(404).json({message: "Create User Failed"});
-        // next(err);
+        // res.status(404).json({message: "Create User Failed"});
+        next(err);
     }
 }
 
@@ -70,7 +76,6 @@ const deleteUser = async (req, res, next) => {
         res.status(201).json(user);
         
     } catch (err) {
-        response.status(500).send(error);
         next(err);
     }
 }

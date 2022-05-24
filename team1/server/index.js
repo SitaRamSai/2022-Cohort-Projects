@@ -10,6 +10,7 @@ const userRoutes = require('./api/routes/users')
 
 server.use(bodyParser.json({ limit: '30mb', extended: true }));
 server.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
+server.use(errorHandler);
 server.use(cors());
 
 // server.use('/posts', postRoutes);
@@ -27,6 +28,15 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
     })
     .catch(err => console.log( err.message ))
 
+    
+    
+    function errorHandler (err, req, res, next) {
+        if (res.headersSent) {
+          return next(err)
+        }
+        res.status(500)
+        res.render('error', { error: err })
+      }
 
     // const express = require('express');
     // const server = express();
