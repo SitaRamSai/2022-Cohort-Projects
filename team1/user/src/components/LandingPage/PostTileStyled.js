@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { HiTrendingUp } from 'react-icons/hi'
 
 export const Posts = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 60%;
+    height: auto;
     width: 80%;
     border:1px solid yellow;
 
@@ -33,15 +34,19 @@ export const PostCount = styled.h2`
 export const Tile = styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
 `;
 
 export const UserDiv = styled.div`
     display: flex;
-
+    align-items: center;
+    width: 50%;
+    border: 1px solid black;
 `;
 
-export const UserImg = styled.img`
-
+export const UserImg = styled(HiTrendingUp)`
+    align-items: center;
+    margin: 0 1rem;
 `;
 
 export const PostInfo = styled.div`

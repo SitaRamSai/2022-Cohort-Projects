@@ -66,6 +66,7 @@ export const SubHeaderTitle = styled.div`
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    
 `;
 
 export const SubHeaderImage = styled.img`
@@ -85,7 +86,7 @@ export const Trending = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: pink;
-  height: 25rem;
+  height: auto;
   padding: 10px;
   top: 20%;
   overflow: auto;

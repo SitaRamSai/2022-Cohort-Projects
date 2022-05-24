@@ -1,6 +1,7 @@
 import React from "react";
 import { 
     Card, 
+    Wrap,
     UserDiv, 
     UserImg, 
     UserName,
@@ -8,6 +9,7 @@ import {
     PostTitle, 
     PostSubTitle,
     PostImage,
+    Container,
     DateCreated, 
     ReadLength
 } from "./PostCardStyled";
@@ -24,19 +26,21 @@ const PostCard = (props) => {
     } = props;
     return(
         <Card>
-            <UserDiv>
-                <UserImg src = { userImg } alt = 'userImg'/>
-                <UserName>{ userName }</UserName>
-            </UserDiv>
-
-            <PostInfo>
-                <PostTitle>{ title }</PostTitle>
-                <PostSubTitle> {subtitle} </PostSubTitle>
-                <PostImage src = { postImg } alt = 'postImg'/>
-                <DateCreated> {dateCreated} </DateCreated>
-                <ReadLength> {readLength} </ReadLength>
-            </PostInfo>
-            
+            <Wrap>
+                <UserDiv>
+                    <UserImg src = { userImg } alt = 'userImg'/>
+                    <UserName>{ userName }</UserName>
+                </UserDiv>
+                <PostInfo>
+                    <PostTitle>{ title }</PostTitle>
+                    <PostSubTitle> {subtitle} </PostSubTitle>
+                    <Container>
+                        <DateCreated> {dateCreated} </DateCreated>
+                        <ReadLength> {readLength} </ReadLength>
+                    </Container>
+                </PostInfo>
+            </Wrap>
+            <PostImage src = { postImg } alt = 'postImg'/>
         </Card>
     )
 }

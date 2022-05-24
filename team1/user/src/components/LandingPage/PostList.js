@@ -10,7 +10,7 @@ const PostList = (props) => {
         userImg = { post.user.userImg }
         userName = { post.user.userName }
         title = { post.title }
-        subtitle = { props.subtitle }
+        subtitle = { post.subtitle }
         dateCreated = { post.dateCreated }
         readLength = { post.readLength }
         postImg = { post.postImg }

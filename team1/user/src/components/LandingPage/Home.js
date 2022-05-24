@@ -26,13 +26,13 @@ import Nav from './Nav';
 const Home = () => {
 
     const posts = [
-        {'id': 1, 'user': {'id': "u1", 'userName': 'user1', 'userImg': 'img1'}, 'title': "Title 1",'subTitle': "This is subtitle1", 'body': " This is body for title 1", 'postImg': 'postImg2', 'dateCreated': 'date', 'readLength': 'readLength', 'category': 'c1'},
-        {'id': 2, 'user': {'id': "u2", 'userName': 'user2', 'userImg': 'img2'}, 'title': "Title 2",'subTitle': "This is subtitle2", 'body': " This is body for title 2", 'postImg': 'postImg1', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c2'},
-        {'id': 3, 'user': {'id': "u3", 'userName': 'user3', 'userImg': 'img3'}, 'title': "Title 3",'subTitle': "This is subtitle3", 'body': " This is body for title 3", 'postImg': 'postImg3', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c3'},
-        {'id': 4, 'user': {'id': "u4", 'userName': 'user4', 'userImg': 'img4'}, 'title': "Title 4",'subTitle': "This is subtitle4", 'body': " This is body for title 4", 'postImg': 'postImg4', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c4'},
-        {'id': 5, 'user': {'id': "u5", 'userName': 'user5', 'userImg': 'img5'}, 'title': "Title 5",'subTitle': "This is subtitle5", 'body': " This is body for title 5", 'postImg': 'postImg5', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c5'},
-        {'id': 6, 'user': {'id': "u6", 'userName': 'user6', 'userImg': 'img6'}, 'title': "Title 6",'subTitle': "This is subtitle6", 'body': " This is body for title 6", 'postImg': 'postImg6', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c6'},
-        {'id': 7, 'user': {'id': "u7", 'userName': 'user7', 'userImg': 'img7'}, 'title': "Title 7",'subTitle': "This is subtitle7", 'body': " This is body for title 7", 'postImg': 'postImg7', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c7'}
+        {'id': 1, 'user': {'id': "u1", 'userName': 'user1', 'userImg': 'img1'}, 'title': "Title 1",'subtitle': "This is subtitle1", 'body': " This is body for title 1", 'postImg': 'postImg2', 'dateCreated': 'date', 'readLength': 'readLength', 'category': 'c1'},
+        {'id': 2, 'user': {'id': "u2", 'userName': 'user2', 'userImg': 'img2'}, 'title': "Title 2",'subtitle': "This is subtitle2", 'body': " This is body for title 2", 'postImg': 'postImg1', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c2'},
+        {'id': 3, 'user': {'id': "u3", 'userName': 'user3', 'userImg': 'img3'}, 'title': "Title 3",'subtitle': "This is subtitle3", 'body': " This is body for title 3", 'postImg': 'postImg3', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c3'},
+        {'id': 4, 'user': {'id': "u4", 'userName': 'user4', 'userImg': 'img4'}, 'title': "Title 4",'subtitle': "This is subtitle4", 'body': " This is body for title 4", 'postImg': 'postImg4', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c4'},
+        {'id': 5, 'user': {'id': "u5", 'userName': 'user5', 'userImg': 'img5'}, 'title': "Title 5",'subtitle': "This is subtitle5", 'body': " This is body for title 5", 'postImg': 'postImg5', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c5'},
+        {'id': 6, 'user': {'id': "u6", 'userName': 'user6', 'userImg': 'img6'}, 'title': "Title 6",'subtitle': "This is subtitle6", 'body': " This is body for title 6", 'postImg': 'postImg6', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c6'},
+        {'id': 7, 'user': {'id': "u7", 'userName': 'user7', 'userImg': 'img7'}, 'title': "Title 7",'subtitle': "This is subtitle7", 'body': " This is body for title 7", 'postImg': 'postImg7', 'dateCreated': 'date', 'readLength': 'readLength','category': 'c7'}
     ];
 
     const tags = [
