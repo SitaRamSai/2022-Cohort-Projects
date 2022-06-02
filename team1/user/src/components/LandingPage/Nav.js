@@ -5,28 +5,31 @@ import {
     NavLink,
     NavMenu,
     NavBtn,
-    NavBtnLink
+    NavBtnLink,
+    NavContainer
 } from './NavStyles';
 
 const Nav = () => {
 
     return (
         <NavBar>
-            <NavLink to='/'>
-                <h1>funBlog</h1>
-            </NavLink>
-            <Bars />
-            <NavMenu>
-            <NavLink to='/about' activeStyle>
-                About
-            </NavLink>
-            <NavLink to='/signup' activeStyle>
-                Signup
-            </NavLink>
-            </NavMenu>
-            <NavBtn>
-                <NavBtnLink to='/login'>Login</NavBtnLink>
-            </NavBtn>
+            <NavContainer>
+                <NavLink to='/'>
+                    <h1>funBlog</h1>
+                </NavLink>
+                <Bars />
+                <NavMenu>
+                <NavLink to='/about' activeStyle>
+                    About
+                </NavLink>
+                <NavLink to='/signup' activeStyle>
+                    Signup
+                </NavLink>
+                </NavMenu>
+                <NavBtn>
+                    <NavBtnLink to='/login'>Login</NavBtnLink>
+                </NavBtn>
+            </NavContainer>
         </NavBar>
     );
 }

@@ -1,23 +1,37 @@
 const mongoose = require('mongoose');
+const { User } = require('./users');
+const {ObjectId} = mongoose.Schema;
 
-const postSchema = mongoose.Schema({
-    postId: Number,
+const PostSchema = mongoose.Schema({
     user: {
-        userId: {type: Number, required: true},
-        userName: {type: String, required: true},
-        userImg: {type: String, required: true}
+        type: ObjectId,
+        ref: 'User'
     },
-    title: {type: String, required: true},
-    subTitle: {type: String, required: true},
-    body: {type: String, required: true},
-    postImg: {type: String, required: true},
-    dateCreated: {
+    title: {
+        type: String,
+        required:true
+    }, 
+    subtitle: {
+        type: String,
+        required:true
+    },
+    body: {
+        type: String,
+        required:true
+    },
+    postImg: {
+        type: String, 
+    },
+    datecreated: {
         type: Date,
-        default: new Date()
+        default: new Date(),
     },
-    readLength: {type: Number, required: true}  
-})
+    readlength: {
+        type: Number, 
+    }
+});
 
-const Posts = mongoose.model('Posts', postSchema);
 
-module.exports = Posts;
+const Post = mongoose.model('Post', PostSchema);
+
+module.exports = {Post}

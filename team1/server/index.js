@@ -1,70 +1,41 @@
 const express = require('express');
-const server = express();
-
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
+// Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
+
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
+// Middleware
+// app.use('/employees', () => {
+//     console.log('Middleware Running');
+// });
+
+// Routes 
+// app.get('/', (req, res) => {
+//     res.send('Hello World');
+// });
+
+
+// app.get('/employees', (req, res) => {
+//     res.send('Employees');
+// });
+
+const connectDB = require('./config/db');
+// Load Config
+dotenv.config({path: './config/config.env'})
+
+connectDB();
+
+// Routes
 const userRoutes = require('./api/routes/users');
+const postRoutes = require('./api/routes/posts');
 
-server.use(bodyParser.json({ limit: '30mb', extended: true }));
-server.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
-server.use(cors());
+app.use('/', userRoutes);
+app.use('/', postRoutes);
 
-server.use('/users', userRoutes);
-
-const CONNECTION_URL = 'mongodb+srv://SitaRam:OnePlus6!@cluster0.d8b4q.mongodb.net/test?retryWrites=true&w=majority';
-const PORT = 5000;
-
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-      server.listen(PORT, () => {
-        console.log(`Server running on port: ${PORT}`);
-      })
-    })
-    .catch(err => {
-      console.error(err);
-    })
+app.listen(3000);
 
 
-// const express = require('express');
-// const server = express();
-
-// const bodyParser = require('body-parser');
-// const mongoose = require('mongoose');
-// const cors = require('cors');
-
-// // const postRoutes = require('./routes/posts');
-// const userRoutes = require('./api/routes/users')
-
-// server.use(bodyParser.json({ limit: '30mb', extended: true }));
-// server.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
-// server.use(errorHandler);
-// server.use(cors());
-
-// // server.use('/posts', postRoutes);
-
-// server.use('/users', userRoutes );
-
-// const CONNECTION_URL = 'mongodb+srv://SitaRam:OnePlus6!@cluster0.d8b4q.mongodb.net/test?retryWrites=true&w=majority';
-// const PORT = 5000;
-
-// mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true });
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-//     // .then(() => {
-//     //     server.listen(PORT, () => {
-//     //         console.log(`Server running on port: ${PORT}`)
-//     //     })
-//     // })
-//     // .catch(err => console.log( err.message ))
-
-    
-    
-//     function errorHandler (err, req, res, next) {
-//         if (res.headersSent) {
-//           return next(err)
-//         }
-//         res.status(500)
-//         res.render('error', { error: err })
-//       }

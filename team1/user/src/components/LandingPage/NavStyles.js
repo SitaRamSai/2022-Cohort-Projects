@@ -6,10 +6,21 @@ export const NavBar = styled.nav`
   background: #000;
   height: 80px;
   display: flex;
-  justify-content: space-between;
-  padding: 0 10%;
+  justify-content: center;
   z-index: 10;
+  width: 100vw;
+  position: fixed;
+  align-items: center;
 `;
+
+export const NavContainer = styled.div`
+
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+
+`;
+
 
 export const NavLink = styled(Link)`
   color: #fff;
@@ -56,7 +67,6 @@ export const NavMenu = styled.div`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  margin-right: 24px;
 
   /* Third Nav */
   /* justify-content: flex-end;
@@ -77,8 +87,6 @@ export const NavBtnLink = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-
-  margin-left: 24px;
 
   &:hover {
     transition: all 0.2s ease-in-out;
