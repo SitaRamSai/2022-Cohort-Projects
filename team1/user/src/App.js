@@ -9,22 +9,19 @@ import Signup from './components/Access/Signup';
 import Nav from './components/LandingPage/Nav';
 
 
-class App extends React.Component{
+const App = () => {
 
- render() {
   return(
     <div>
       <Nav/>
       <Routes>
-        <Route exact path='/' element={<Home/>} />
+        <Route path='/' element={<Home/>} exact />
         <Route path='/home' element={<LoggedInHome/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/login' element = { <Login /> } />
         <Route path='/signup' element = { <Signup /> } />
       </Routes>
-      
     </div>
   )}
-}
 
 export default App;
